@@ -1,4 +1,15 @@
 # Starter pipeline
+- task: Maven@4
+  inputs:
+    azureSubscription: 'Azure subscription 1(4f2c4549-10dd-4bcc-90fe-53cf617c5e0e)'
+    mavenPomFile: 'pom.xml'
+    publishJUnitResults: true
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    javaHomeOption: 'JDKVersion'
+    mavenVersionOption: 'Default'
+    mavenAuthenticateFeed: false
+    effectivePomSkip: false
+    sonarQubeRunAnalysis: false
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
